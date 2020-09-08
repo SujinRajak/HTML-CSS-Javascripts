@@ -2,7 +2,7 @@
 
 namespace WebApplication1.Migrations
 {
-    public partial class intialmigration : Migration
+    public partial class initialmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,16 +12,10 @@ namespace WebApplication1.Migrations
                 {
                     id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Hospitalization = table.Column<string>(type: "nvarchar(100)", nullable: true),
+                    Product = table.Column<string>(type: "nvarchar(100)", nullable: true),
                     Amount = table.Column<int>(nullable: false),
                     Rate = table.Column<int>(nullable: false),
-                    Frequency = table.Column<string>(type: "nvarchar(10)", nullable: true),
-                    Duration = table.Column<int>(nullable: false),
-                    stage = table.Column<int>(nullable: false),
-                    startMonth = table.Column<int>(nullable: false),
-                    EndMonth = table.Column<int>(nullable: false),
-                    SUnits = table.Column<int>(nullable: false),
-                    PUnits = table.Column<int>(nullable: false),
+                    Price = table.Column<int>(nullable: false),
                     Comments = table.Column<string>(type: "nvarchar(100)", nullable: true)
                 },
                 constraints: table =>

@@ -9,8 +9,8 @@ using WebApplication1.Model;
 namespace WebApplication1.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200907080101_intial-migration")]
-    partial class intialmigration
+    [Migration("20200908085114_initial-migration")]
+    partial class initialmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,31 +33,13 @@ namespace WebApplication1.Migrations
                     b.Property<string>("Comments")
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("Duration")
+                    b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.Property<int>("EndMonth")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Frequency")
-                        .HasColumnType("nvarchar(10)");
-
-                    b.Property<string>("Hospitalization")
+                    b.Property<string>("Product")
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("PUnits")
-                        .HasColumnType("int");
-
                     b.Property<int>("Rate")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SUnits")
-                        .HasColumnType("int");
-
-                    b.Property<int>("stage")
-                        .HasColumnType("int");
-
-                    b.Property<int>("startMonth")
                         .HasColumnType("int");
 
                     b.HasKey("id");

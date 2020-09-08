@@ -1,7 +1,8 @@
 {
-  "name": "webapplication1",
+  "name": "ReactExcel",
   "version": "0.1.0",
   "private": true,
+  "main": "./src/index2",
   "dependencies": {
     "bootstrap": "^4.1.3",
     "jexcel": "^4.4.1",

@@ -17,11 +17,10 @@ class Index extends Component {
         //console.log(this.options);
         this.wrapper = React.createRef();
         this.state = {
-            hopitalizarion='',
-            Amount='',
-            rate='',
-            frequency='',
-
+            Product:'',
+            Amount:'',
+            Quantity:'',
+            Total:''
         }
 
     }
@@ -64,11 +63,8 @@ class Index extends Component {
                     <input type="button" className="btn-primary mb-4 ml-2" value="Add New Cloumn" onClick={() => this.addColumn()} />
                     <input type="button" className="btn-primary mb-4 ml-2" value="Delete Row" onClick={() => this.deleteRow()} />
                     <input type="button" className="btn-primary mb-4 ml-2" value="Delete Column" onClick={() => this.deleteCol()} />
-                    
-                    <input type="button" className="btn-primary mb-4 ml-2" value="Delete Column" onClick={() => this.fullscreen()} />
-                    
+                    <input type="button" className="btn-primary mb-4 ml-2" value="FullScreen" onClick={() => this.fullscreen()} />    
                 </div>
-               
                 <Container className="text-center">
                     <div ref={this.wrapper} />
                 </Container>
@@ -81,8 +77,14 @@ class Index extends Component {
 }
 
 var options = {
-    data: [['Loren', 1, 2]],
-    minDimensions: [10, 10]
+    data: [[]],
+    columns: [
+        { title: 'Product', width: 300 },
+        { title: 'Amount', width: 100 },
+        { title: 'Quantity', width: 100 },
+        {title:'Total Price',width:200}
+    ],
+    minDimensions: [4, 4]
 }
 
 const rootElement = document.getElementById("root");

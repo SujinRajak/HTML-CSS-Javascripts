@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WebApplication1.Interface;
+using WebApplication1.MockInterface;
 using WebApplication1.Model;
 
 namespace WebApplication1
@@ -33,6 +35,7 @@ namespace WebApplication1
             {
                 configuration.RootPath = "ClientApp/build";
             });
+            services.AddScoped<Ijexcel, MockIjexcel>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

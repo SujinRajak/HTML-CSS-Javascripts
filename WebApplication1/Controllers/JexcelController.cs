@@ -3,23 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using WebApplication1.Interface;
 using WebApplication1.Model;
 
 namespace WebApplication1.Controllers
 {
-    public class JexcelController : Controller
+    [ApiController]
+    [Route("[controller]")]
+    public class JexcelController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private  Ijexcel _context;
 
-        public JexcelController(ApplicationDbContext context) 
+        public JexcelController(Ijexcel context) 
         {
             _context = context;
         }
         
-        
-        public IActionResult Index()
+        [HttpGet]
+        public IEnumerable<JexcelDemo> Index()
         {
-            return View();
+            var value = _context.getallval();
+            List<JexcelDemo> lister = value.ToList();
+            
+            return value;
         }
     }
 }

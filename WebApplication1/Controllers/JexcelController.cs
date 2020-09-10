@@ -23,7 +23,7 @@ namespace WebApplication1.Controllers
         public IEnumerable<JexcelDemo> Index()
         {
             var value = _context.getallval();
-            List<JexcelDemo> lister = value.ToList();
+           // List<JexcelDemo> lister = value.ToList();
             
             return value;
         }
